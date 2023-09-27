@@ -1,7 +1,7 @@
 let usuario =
     [
         "juan ",
-        "Miguel ",
+        "miguel ",
         "cammi "
     ]
 let Apellidos =
@@ -26,7 +26,7 @@ let Ubicaciones=
     [
         "colombia",
         "Argentina",
-        "Brazil"
+        "BraZil"
     ]
     
 alert("numero de usuario a registrar: "+  ide.length)
@@ -35,7 +35,7 @@ for (empezar = 1; empezar <= 100; empezar++)
 {
     function modificarLista ()
 {
-    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar" ));
+    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar \n 3 para modificar" ));
  
  if (elegir === 1)
     {
@@ -83,7 +83,7 @@ if (elegir == 2)
 
     // Ver usuarios
 
-     console.log("informacion de usuario borrado \n nombre: ",usuario[b],"apellido: ", Apellidos[b],"id: ", id[b],"telefono: ", telefonos[b],"ubicacion: ",Ubicaciones[b])
+     console.log("informacion de usuario borrado \n nombre: ",usuari[b],"apellido: ", Apellidos[b],"id: ", id[b],"telefono: ", telefonos[b],"ubicacion: ",Ubicaciones[b])
     
     // Ver usuarios predeterminados
 
@@ -96,12 +96,33 @@ if (elegir == 2)
 }
 
 
+
+if (elegir == 3)
+{
+    let M = parseInt(prompt("id del usuario que quiere modificar"));
+
+    nombre1 = prompt("Cual es tu nombre");
+    usuario[M] = nombre1;
+
+    apellido1 = prompt("Cual es tu apellido");
+    Apellidos[M] = apellido1;
+
+    telefono1 = prompt("Cual es tu telefono");
+    telefonos[M] = telefono1 
+
+    ubicacion1 = prompt("Cual es tu ubicacion");
+    Ubicaciones[M] = ubicacion1;
+
+    console.log("informacion de usuario Modificado \n nombre: ",usuario[M],"apellido: ", Apellidos[M],"id: ", ide[M],"telefono: ", telefonos[M],"ubicacion: ",Ubicaciones[M])
+
+}
+
 if (elegir == null)
 {
     empezar = 100;
 }
 
-alert("Siguiente ID a registrar: "+  id.length);
+alert("Siguiente ID a registrar: "+  ide.length);
 
 }
 modificarLista()
